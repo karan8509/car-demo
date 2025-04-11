@@ -111,6 +111,10 @@ app.get("/search", (req, res) => {
   }
 });
 
+app.get("/*", (req, res) => {
+  res.json({ status: "ok" });
+});
+
 app.listen(PORT, () => {
   console.log(`server on http://localhost:${PORT}`);
 });
